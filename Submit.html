@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submission Confirmed</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --soft-red: #f6d6d6;
+      --rose: #fae3e3;
+      --accent: #fbecec;
+      --primary: #c94f4f;
+      --text: #3a3a3a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--accent);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .container {
+      background-color: var(--rose);
+      padding: 2.5rem;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 6px 20px rgba(201, 79, 79, 0.1);
+    }
+
+    h1 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    a:hover {
+      background-color: #b44040;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Submission Successful!</h1>
+    <p>Your research paper has been received. Thank you for your submission.</p>
+    <a href="home.html">Return to Home</a> <!-- ✅ Link to Home Page -->
+  </div>
+
+</body>
+</html>

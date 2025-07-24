@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research Paper Submission</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --soft-red: #f6d6d6;
+      --rose: #fae3e3;
+      --accent: #fbecec;
+      --primary: #c94f4f;
+      --text: #3a3a3a;
+      --input-bg: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #fbecec, #fae3e3);
+      color: var(--text);
+      padding: 2rem;
+      line-height: 1.6;
+      animation: fadeIn 1s ease-in;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary);
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      animation: slideDown 1s ease-out;
+    }
+
+    form {
+      background-color: var(--rose);
+      max-width: 700px;
+      margin: auto;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(201, 79, 79, 0.1);
+      animation: fadeInUp 1s ease;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1.3rem;
+      border: 1px solid #e2bfbf;
+      border-radius: 10px;
+      background-color: var(--input-bg);
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 6px #f6d6d6;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 0.5rem;
+    }
+
+    .radio-group,
+    .checkbox-group {
+      margin-bottom: 1.5rem;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 48%;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #b44040;
+      transform: scale(1.03);
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #555;
+      animation: fadeIn 2s ease-in;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      0% { transform: translateY(-30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      0% { transform: translateY(20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+
+      form {
+        padding: 1.5rem;
+      }
+
+      .button-row {
+        flex-direction: column;
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Research Paper Submission</h1>
+
+  <form action="submit.html" method="post" enctype="multipart/form-data">
+    <label for="author">Author Name</label>
+    <input type="text" id="author" name="author" required>
+
+    <label for="password">Author Password</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="age">Author Age</label>
+    <input type="number" id="age" name="age" min="18" required>
+
+    <label for="website">Personal Website</label>
+    <input type="url" id="website" name="website">
+
+    <label for="search">Search Topic</label>
+    <input type="search" id="search" name="search">
+
+    <label for="title">Paper Title</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="abstract">Abstract</label>
+    <textarea id="abstract" name="abstract" required></textarea>
+
+    <label for="keywords">Keywords</label>
+    <input type="text" id="keywords" name="keywords" required>
+
+    <label for="category">Research Category</label>
+    <select id="category" name="category" required>
+      <option value="">--Select--</option>
+      <option value="Computer Science">Computer Science</option>
+      <option value="Engineering">Engineering</option>
+      <option value="Biology">Biology</option>
+      <option value="Mathematics">Mathematics</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <div class="radio-group">
+      <p>Preferred Presentation:</p>
+      <label><input type="radio" name="presentation" value="oral" required> Oral</label>
+      <label><input type="radio" name="presentation" value="poster"> Poster</label>
+    </div>
+
+    <div class="checkbox-group">
+      <p>Topics of Interest:</p>
+      <label><input type="checkbox" name="ai" value="AI"> Artificial Intelligence</label><br>
+      <label><input type="checkbox" name="ml" value="ML"> Machine Learning</label><br>
+      <label><input type="checkbox" name="iot" value="IoT"> IoT</label><br>
+      <label><input type="checkbox" name="networks" value="Networks"> Networks</label>
+    </div>
+
+    <label for="file">Upload Paper (PDF)</label>
+    <input type="file" id="file" name="file" accept=".pdf" required>
+
+    <div class="button-row">
+      <input type="submit" value="Submit Paper">
+      <input type="reset" value="Reset Form">
+    </div>
+  </form>
+
+  <footer>
+    <p>&copy; Samuel Sawyer J</p>
+  </footer>
+
+</body>
+</html>
